@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 const App = () => {
   return (
     <View style={styles.ContainerStyle}>
-      <View>
+      <View style={styles.FlexBoxStyle}>
         <TextInput placeholder='Course Goals...' style={styles.TextInputStyle} />
         <Button title='ADD' style={styles.ButtonStyle}/>
       </View>
@@ -24,10 +24,13 @@ const styles = StyleSheet.create({
     fontSize:16,
     borderBottomColor:'black',
     borderBottomWidth:2,
-    marginBottom:15
+    marginBottom:15,
+    width:'75%'
   },
-  ButtonStyle:{
-    
+  FlexBoxStyle:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center'
   }
 });
 
